@@ -1,6 +1,6 @@
 ## Salary Prediction Engine: Project Overview
 
-* Created a tool that estimates data science salaries (MAE ~ $ 11K) to help data scientists negotiate their income when they get a job.
+* Created a tool that estimates data science salaries (MAE ~ $ 11K) to help data science job applicants negotiate their income when they get a job.
 * Scraped over 1000 job descriptions from glassdoor using python and selenium
 * Engineered features from the text of each job description to quantify the value companies put on python, excel, aws, and spark.
 * Optimized Linear, Lasso, and Random Forest Regressors using GridsearchCV to reach the best model.
@@ -73,9 +73,9 @@ I tried three different models:
 ### Model performance
 The Random Forest model far outperformed the other approaches on the test and validation sets.
 
-* **Random Forest** : MAE = 11.22
 * **Linear Regression**: MAE = 18.86
-* **Ridge Regression**: MAE = 19.67
+* **Lasso Regression**: MAE = 19.67
+* **Random Forest** : MAE = 11.22
 
 ## Productionization
 

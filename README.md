@@ -36,8 +36,9 @@ Tweaked the web scraper github repo (above) to scrape 1000 job postings from gla
 
 ## Data Cleaning<br/>
 
-After scraping the data, I needed to clean it up so that it was usable for our model. I made the following changes and created the following variables:<br/>
+After scraping the data, data cleaning was performed to make the data usable for model building.<br/>
 
+Data Cleaning:<br/>
 * Parsed numeric data out of salary<br/>
 * Made columns for employer provided salary and hourly wages<br/>
 * Removed rows without salary<br/>
@@ -56,7 +57,7 @@ After scraping the data, I needed to clean it up so that it was usable for our m
 
 ## Exploratory Data Analysis
 
-I looked at the distributions of the data and the value counts for the various categorical variables. Below are a few highlights from the pivot tables.<br/>
+Observed the distributions of the data and value counts for the various categorical variables. Below are a few highlights from the pivot tables.<br/>
 
 ![alt text](https://github.com/Vignesh-Shenbagarajan/salary-prediction-engine/blob/master/salary_by_job_title.PNG) ![alt text](https://github.com/Vignesh-Shenbagarajan/salary-prediction-engine/blob/master/correlation_visual.png)
 
@@ -64,16 +65,20 @@ I looked at the distributions of the data and the value counts for the various c
 ## Model Building
 First, I transformed the categorical variables into dummy variables. I also split the data into train and tests sets with a test size of 20%.
 
-I tried three different models and evaluated them using Mean Absolute Error. I chose MAE because it is relatively easy to interpret and outliers aren’t particularly bad in for this type of model.
+Following adjustments were made before starting the model building:<br/>
+* Transformed categorical variables ----> dummy variables<br/>
+* Split the data into training and testing (80-20 train-test split)
+
+Three different models were trained and evaluated using Mean Absolute Error. MAE was chosen because it is relatively easy to interpret and outliers aren’t particularly bad in for this type of model.
 
 I tried three different models:
 
-* **Multiple Linear Regression** – Baseline for the model<br/>
-* **Lasso Regression** – Because of the sparse data from the many categorical variables, I thought a normalized regression like lasso would be effective.<br/>
-* **Random Forest** – Again, with the sparsity associated with the data, I thought that this would be a good fit.<br/>
+* Multiple Linear Regression <br/>
+* Lasso Regression <br/>
+* Random Forest <br/>
 
 ### Model performance
-The Random Forest model far outperformed the other approaches on the test and validation sets.
+The Random Forest model performed better than the other approaches on the test and validation sets.
 
 * **Linear Regression**: MAE = 18.86
 * **Lasso Regression**: MAE = 19.67
@@ -81,4 +86,4 @@ The Random Forest model far outperformed the other approaches on the test and va
 
 ## Productionization
 
-In this step, I built a flask API endpoint that was hosted on a local webserver by following along with the TDS tutorial in the reference section above. The API endpoint takes in a request with a list of values from a job listing and returns an estimated salary.
+Built a flask API endpoint that was hosted on a local webserver by following the Flask API documentation in the reference section above. The API endpoint takes in a request with a list of values from a job listing and returns an estimated salary.

@@ -76,7 +76,7 @@ The Random Forest model far outperformed the other approaches on the test and va
 
 * **Linear Regression**: MAE = 18.86
 * **Lasso Regression**: MAE = 19.67
-* **Random Forest** : MAE = 11.22
+* **Random Forest** : MAE = 10.87
 
 ## Productionization
 

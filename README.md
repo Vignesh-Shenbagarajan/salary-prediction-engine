@@ -63,7 +63,6 @@ Observed the distributions of the data and value counts for the various categori
 
 ![alt text](https://github.com/Vignesh-Shenbagarajan/salary-prediction-engine/blob/master/positions_by_state.png)
 ## Model Building
-First, I transformed the categorical variables into dummy variables. I also split the data into train and tests sets with a test size of 20%.
 
 Following adjustments were made before starting the model building:<br/>
 * Transformed categorical variables ----> dummy variables<br/>

@@ -1,8 +1,9 @@
 ## Salary Prediction Engine: Project Overview
 
-* Created a tool that estimates data science salaries (MAE ~ $ 11K) to help data science job applicants negotiate their income when they get a job.
+* Created a tool that estimates data science salaries (MAE ~ $ 11K) to help data science job applicants in USA have an understanding of the data science payscale across the country.
 * Scraped over 1000 job descriptions from glassdoor using python and selenium
-* Engineered features from the text of each job description to quantify the value companies put on python, excel, aws, and spark.
+* Extracted new factors from job description to quantify the value companies put on required data science tools like python, excel, aws, and spark. 
+* Built regression models to predict the average salary for a data science job based on job description, title, seniority, job state, company age, company size, Industry, etc.
 * Optimized Linear, Lasso, and Random Forest Regressors using GridsearchCV to reach the best model.
 * Built a client facing API using flask
 
@@ -59,7 +60,7 @@ I looked at the distributions of the data and the value counts for the various c
 
 ![alt text](https://github.com/Vignesh-Shenbagarajan/salary-prediction-engine/blob/master/salary_by_job_title.PNG) ![alt text](https://github.com/Vignesh-Shenbagarajan/salary-prediction-engine/blob/master/correlation_visual.png)
 
-![alt text](https://github.com/Vignesh-Shenbagarajan/salary-prediction-engine/blob/master/positions_by_state.png)
+![alt text](https://github.com/Vignesh-Shenbagarajan/salary-prediction-engine/blob/master/positions_by_state.png) ![alt text] (
 ## Model Building
 First, I transformed the categorical variables into dummy variables. I also split the data into train and tests sets with a test size of 20%.
 

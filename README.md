@@ -1,20 +1,17 @@
-## Salary Prediction Engine: Project Overview
+## Salary Prediction Engine: Overview
 
-* Created a tool that estimates data science salaries (MAE ~ $ 11K) to help data science job applicants in USA have an understanding of the data science payscale across the country.
+* Created a tool that estimates data science salaries (MAE ~ $ 10K) to help job applicants in USA have an understanding of the data science payscale across the country.
 * Scraped over 1000 job descriptions from glassdoor using python and selenium
 * Extracted new factors from job description to quantify the value companies put on required data science tools like python, excel, aws, and spark. 
 * Built regression models to predict the average salary for a data science job based on job description, title, seniority, job state, company age, company size, Industry, etc.
 * Optimized Linear, Lasso, and Random Forest Regressors using GridsearchCV to reach the best model.
 * Built a client facing API using flask
 
-## Code and Resources Used
+## Tools Used
 
 **Python Version**: 3.7<br/>
 **Packages**: pandas, numpy, sklearn, matplotlib, seaborn, selenium, flask, json, pickle<br/>
 **For Web Framework Requirements**: pip install -r requirements.txt<br/>
-**Scraper Github**: https://github.com/arapfaik/scraping-glassdoor-selenium<br/>
-**Scraper Article**: https://towardsdatascience.com/selenium-tutorial-scraping-glassdoor-com-in-10-minutes-3d0915c6d905<br/>
-**Flask Productionization**: https://towardsdatascience.com/productionize-a-machine-learning-model-with-flask-and-heroku-8201260503d2<br/>
 
 Web Scraping
 Tweaked the web scraper github repo (above) to scrape 1000 job postings from glassdoor.com. With each job, we got the following:
@@ -86,3 +83,8 @@ The Random Forest model performed better than the other approaches on the test a
 ## Productionization
 
 Built a flask API endpoint that was hosted on a local webserver by following the Flask API documentation in the reference section above. The API endpoint takes in a request with a list of values from a job listing and returns an estimated salary.
+
+## References
+**Scraper Github**: https://github.com/arapfaik/scraping-glassdoor-selenium<br/>
+**Scraper Article**: https://towardsdatascience.com/selenium-tutorial-scraping-glassdoor-com-in-10-minutes-3d0915c6d905<br/>
+**Flask Productionization**: https://towardsdatascience.com/productionize-a-machine-learning-model-with-flask-and-heroku-8201260503d2<br/>

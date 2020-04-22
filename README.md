@@ -57,8 +57,9 @@ After scraping the data, I needed to clean it up so that it was usable for our m
 
 I looked at the distributions of the data and the value counts for the various categorical variables. Below are a few highlights from the pivot tables.<br/>
 
-![alt text](http://url/to/img.png)
+![alt text](https://github.com/Vignesh-Shenbagarajan/salary-prediction-engine/blob/master/salary_by_job_title.PNG) ![alt text](https://github.com/Vignesh-Shenbagarajan/salary-prediction-engine/blob/master/correlation_visual.png)
 
+![alt text](https://github.com/Vignesh-Shenbagarajan/salary-prediction-engine/blob/master/positions_by_state.png)
 ## Model Building
 First, I transformed the categorical variables into dummy variables. I also split the data into train and tests sets with a test size of 20%.
 
@@ -75,7 +76,7 @@ The Random Forest model far outperformed the other approaches on the test and va
 
 * **Linear Regression**: MAE = 18.86
 * **Lasso Regression**: MAE = 19.67
-* **Random Forest** : MAE = 11.22
+* **Random Forest** : MAE = 10.87
 
 ## Productionization
 

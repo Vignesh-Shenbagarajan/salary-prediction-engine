@@ -82,7 +82,7 @@ The Random Forest model performed better than the other approaches on the test a
 
 ## Productionization
 
-Built a flask API endpoint that was hosted on a local webserver by following the Flask API documentation in the reference section above. The API endpoint takes in a request with a list of values from a job listing and returns an estimated salary.
+Built a flask API endpoint that was hosted on a local webserver by following the Flask API documentation in the reference section below. The API endpoint takes in a request with a list of values from a job listing and returns an estimated salary.
 
 ## References
 **Scraper Github**: https://github.com/arapfaik/scraping-glassdoor-selenium<br/>
